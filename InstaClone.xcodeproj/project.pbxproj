@@ -12,6 +12,7 @@
 		B61C525A2AC38DC50034F0E5 /* setCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C52592AC38DC50034F0E5 /* setCorner.swift */; };
 		B61C525D2AC38DE80034F0E5 /* circleCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C525C2AC38DE80034F0E5 /* circleCorner.swift */; };
 		B61C525F2AC38E2D0034F0E5 /* setBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C525E2AC38E2D0034F0E5 /* setBorder.swift */; };
+		B632095A2AC88D1000EC020D /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63209592AC88D1000EC020D /* PostResponse.swift */; };
 		B63FB8832AC300630083F0F9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63FB8822AC300630083F0F9 /* MainTabBarController.swift */; };
 		B63FB8852AC301E20083F0F9 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63FB8842AC301E20083F0F9 /* SearchVC.swift */; };
 		B63FB8872AC3022E0083F0F9 /* addPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63FB8862AC3022E0083F0F9 /* addPostVC.swift */; };
@@ -27,6 +28,7 @@
 		B65F83622AC21EDC00433CF5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F83612AC21EDB00433CF5 /* LoginVC.swift */; };
 		B66926582AC41B7D00F8F8A5 /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66926572AC41B7D00F8F8A5 /* UITextfield+Extension.swift */; };
 		B685F1862AC4C20300B0D970 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685F1852AC4C20300B0D970 /* ShowAlert.swift */; };
+		B686E7282AC74D12003EC9D9 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686E7272AC74D12003EC9D9 /* HomeTableViewCell.swift */; };
 		B6EEEA7C2AC322D2002EF265 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6EEEA7B2AC322D1002EF265 /* GoogleService-Info.plist */; };
 		B6EEEA7F2AC3244B002EF265 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B6EEEA7E2AC3244B002EF265 /* FirebaseAuth */; };
 		B6EEEA852AC3244B002EF265 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B6EEEA842AC3244B002EF265 /* FirebaseStorage */; };
@@ -46,6 +48,7 @@
 		B61C52592AC38DC50034F0E5 /* setCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setCorner.swift; sourceTree = "<group>"; };
 		B61C525C2AC38DE80034F0E5 /* circleCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleCorner.swift; sourceTree = "<group>"; };
 		B61C525E2AC38E2D0034F0E5 /* setBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setBorder.swift; sourceTree = "<group>"; };
+		B63209592AC88D1000EC020D /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		B63FB8822AC300630083F0F9 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B63FB8842AC301E20083F0F9 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		B63FB8862AC3022E0083F0F9 /* addPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPostVC.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		B65F83612AC21EDB00433CF5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B66926572AC41B7D00F8F8A5 /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
 		B685F1852AC4C20300B0D970 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		B686E7272AC74D12003EC9D9 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B6EEEA7B2AC322D1002EF265 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +180,7 @@
 				B63FB8862AC3022E0083F0F9 /* addPostVC.swift */,
 				B63FB8882AC302420083F0F9 /* reelsVC.swift */,
 				B63FB88A2AC302580083F0F9 /* profileVC.swift */,
+				B686E7272AC74D12003EC9D9 /* HomeTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 		B65F835B2AC21D1D00433CF5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B63209592AC88D1000EC020D /* PostResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,6 +304,8 @@
 				B66926582AC41B7D00F8F8A5 /* UITextfield+Extension.swift in Sources */,
 				B61C525A2AC38DC50034F0E5 /* setCorner.swift in Sources */,
 				B607E58B2AC4507900469EC1 /* SignUpVC.swift in Sources */,
+				B686E7282AC74D12003EC9D9 /* HomeTableViewCell.swift in Sources */,
+				B632095A2AC88D1000EC020D /* PostResponse.swift in Sources */,
 				B63FB8872AC3022E0083F0F9 /* addPostVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,9 +6,16 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeVC: UIViewController {
 
+    private let tableView : UITableView = {
+        let tv = UITableView()
+        tv.backgroundColor = .systemBackground
+        return tv
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -17,8 +24,15 @@ class HomeVC: UIViewController {
     
     func configure(){
         view.backgroundColor = .systemBackground
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
+        
+        tableView.snp.makeConstraints { make in
+            make.trailing.leading.bottom.top.equalToSuperview()
+        }
     }
-    
     private func configureNavBar(){
         
         let image = UIImage(named: "logo")?.withTintColor(.systemBackground)
@@ -36,8 +50,24 @@ class HomeVC: UIViewController {
         ]
             
         navigationController?.navigationBar.tintColor = .label
+        
     }
 }
 
 
 
+extension HomeVC : UITableViewDelegate , UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 700
+    }
+    
+}
