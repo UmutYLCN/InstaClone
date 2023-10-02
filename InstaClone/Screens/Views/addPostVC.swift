@@ -136,7 +136,7 @@ class addPostVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
                                             "imageUrl" : imageUrl!,
                                             "postedBy" : Auth.auth().currentUser?.email!,
                                             "postComment":postText,
-                                            "date":FieldValue.serverTimestamp(),
+                                            "date": FieldValue.serverTimestamp(),
                                             "likes" : 0
                             ] as [String : Any]
                             
@@ -152,10 +152,7 @@ class addPostVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
                                     
                                     self.dismiss(animated: true)
                                     
-                                    
-                                    
-                                    
-                                    
+                
                                 }
             
                             })

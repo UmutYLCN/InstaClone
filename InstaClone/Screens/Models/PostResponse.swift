@@ -19,5 +19,4 @@ struct Post : Codable {
     let likes : Int
     let postComment : String
     let postedBy : String
-    let date : Date
 }

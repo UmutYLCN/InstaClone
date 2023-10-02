@@ -36,7 +36,7 @@ class HomeVC: UIViewController {
     
     func fetchdata(){
         let firestoreDatabase = Firestore.firestore()
-        firestoreDatabase.collection("Posts").addSnapshotListener { snapshot, err in
+        firestoreDatabase.collection("Posts").order(by: "date", descending: true).addSnapshotListener { snapshot, err in
             if err != nil {
                 print(err?.localizedDescription)
             } else {
@@ -46,12 +46,14 @@ class HomeVC: UIViewController {
                         let postedBy = document.get("postedBy")
                         let postedComment = document.get("postComment")
                         let imageUrl = document.get("imageUrl")
-                        let likes = document.get("likes")
-                        let date = document.get("date")
-                        let result = Post(imageUrl: imageUrl as! String, likes: likes as! Int, postComment: postedComment as! String, postedBy: postedBy as! String, date: Date.now)
+                        let likes = document.get("likes")            
+                        
+                        let result = Post(imageUrl: imageUrl as! String, likes: likes as! Int, postComment: postedComment as! String, postedBy: postedBy as! String)
                     
                         self.posts.append(result)
                         self.tableView.reloadData()
+                        
+                        
                     }
                 }
             }
@@ -111,7 +113,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 700
+        return 620
     }
     
 }
