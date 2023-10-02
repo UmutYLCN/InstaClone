@@ -29,6 +29,8 @@
 		B66926582AC41B7D00F8F8A5 /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66926572AC41B7D00F8F8A5 /* UITextfield+Extension.swift */; };
 		B685F1862AC4C20300B0D970 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B685F1852AC4C20300B0D970 /* ShowAlert.swift */; };
 		B686E7282AC74D12003EC9D9 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686E7272AC74D12003EC9D9 /* HomeTableViewCell.swift */; };
+		B6BEEF722AC998BF006FCD88 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B6BEEF712AC998BF006FCD88 /* SDWebImage */; };
+		B6BEEF742AC99981006FCD88 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BEEF732AC99981006FCD88 /* PostViewModel.swift */; };
 		B6EEEA7C2AC322D2002EF265 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6EEEA7B2AC322D1002EF265 /* GoogleService-Info.plist */; };
 		B6EEEA7F2AC3244B002EF265 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B6EEEA7E2AC3244B002EF265 /* FirebaseAuth */; };
 		B6EEEA852AC3244B002EF265 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B6EEEA842AC3244B002EF265 /* FirebaseStorage */; };
@@ -65,6 +67,7 @@
 		B66926572AC41B7D00F8F8A5 /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
 		B685F1852AC4C20300B0D970 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
 		B686E7272AC74D12003EC9D9 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		B6BEEF732AC99981006FCD88 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		B6EEEA7B2AC322D1002EF265 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +86,7 @@
 				B6EEEA8D2AC3250C002EF265 /* FirebaseStorage in Frameworks */,
 				B6EEEA852AC3244B002EF265 /* FirebaseStorage in Frameworks */,
 				B6EEEA8F2AC3253B002EF265 /* FirebaseAnalytics in Frameworks */,
+				B6BEEF722AC998BF006FCD88 /* SDWebImage in Frameworks */,
 				B6EEEAA52AC3253B002EF265 /* FirebaseDynamicLinks in Frameworks */,
 				B6EEEAA72AC3253B002EF265 /* FirebaseFirestore in Frameworks */,
 			);
@@ -188,6 +192,7 @@
 		B65F835A2AC21D1700433CF5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B6BEEF732AC99981006FCD88 /* PostViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				B6EEEAA02AC3253B002EF265 /* FirebaseDatabase */,
 				B6EEEAA42AC3253B002EF265 /* FirebaseDynamicLinks */,
 				B6EEEAA62AC3253B002EF265 /* FirebaseFirestore */,
+				B6BEEF712AC998BF006FCD88 /* SDWebImage */,
 			);
 			productName = InstaClone;
 			productReference = B65F833D2AC21A3D00433CF5 /* InstaClone.app */;
@@ -261,6 +267,7 @@
 			packageReferences = (
 				B65F835C2AC21E9A00433CF5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				B6EEEA7D2AC3244B002EF265 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B6BEEF702AC998BF006FCD88 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = B65F833E2AC21A3D00433CF5 /* Products */;
 			projectDirPath = "";
@@ -289,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6BEEF742AC99981006FCD88 /* PostViewModel.swift in Sources */,
 				B63FB8852AC301E20083F0F9 /* SearchVC.swift in Sources */,
 				B65F83452AC21A3D00433CF5 /* HomeVC.swift in Sources */,
 				B65F83412AC21A3D00433CF5 /* AppDelegate.swift in Sources */,
@@ -527,6 +535,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		B6BEEF702AC998BF006FCD88 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.2;
+			};
+		};
 		B6EEEA7D2AC3244B002EF265 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -547,6 +563,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B65F835C2AC21E9A00433CF5 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		B6BEEF712AC998BF006FCD88 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6BEEF702AC998BF006FCD88 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 		B6EEEA7E2AC3244B002EF265 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

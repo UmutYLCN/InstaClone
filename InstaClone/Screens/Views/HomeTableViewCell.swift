@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SDWebImage
 
 
 class HomeTableViewCell: UITableViewCell {
@@ -146,6 +147,14 @@ class HomeTableViewCell: UITableViewCell {
             make.top.equalTo(likeBtn.snp.bottom).offset(10)
         }
         
+        
+    }
+    
+    public func configure(with model : PostViewModel){
+        guard let url = URL(string: "\(model.imageUrl)") else {return}
+        postimageView.sd_setImage(with: url,completed: nil)
+        detail.text = model.postComment
+        usernameLabel.text = model.postedBy
         
     }
     

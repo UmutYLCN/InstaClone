@@ -28,7 +28,6 @@ class profileVC: UIViewController {
     }
     
     private func configureNavBar(){
-       
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "umutylcnn_", style: .plain, target: self, action: nil)
         self.navigationItem.leftBarButtonItem?.setTitleTextAttributes(
             [
